@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+int main()
+{
+    int moisture;
+    int threshold = 40;
+
+    printf("===== SMART WATERING SYSTEM =====\n");
+
+    printf("Enter soil moisture level (0-100): ");
+    scanf("%d", &moisture);
+
+    if (moisture < 0 || moisture > 100)
+    {
+        printf("Invalid moisture level!\n");
+    }
+    else if (moisture < threshold)
+    {
+        printf("\nSoil is dry.\n");
+        printf("Water Pump: ON\n");
+        printf("Watering the plants...\n");
+    }
+    else
+    {
+        printf("\nSoil moisture is sufficient.\n");
+        printf("Water Pump: OFF\n");
+        printf("No watering required.\n");
+    }
+
+    return 0;
+}
